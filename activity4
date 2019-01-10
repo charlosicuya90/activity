@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AcharlCoffee</title>
+</head>
+<body>
+<center>
+<input type="text" name="" id="Coffee">	
+<p>350ML = 25.00</p><input type="button" value="**" onclick="first()">
+<p>450ML = 30.00</p><input type="button" value="**" onclick="second()">
+<p>750ML = 50.00</p><input type="button" value="**" onclick="third()">
+<br><br><br><br>
+<h1 id="result"></h1>
+<h1 id="result1"></h1>	
+</center>
+</body>
+<script type="text/javascript">
+function first()
+{
+var variant3 = Number(document.getElementById("Coffee").value);
+var pool;
+if (isNaN(variant3))
+{
+alert("Invalid")
+}
+else
+{
+if (variant3 > 49)
+pool = variant3 - 50
+{
+document.getElementById("result").innerHTML = "Thankyou for comming";
+document.getElementById("result1").innerHTML = pool;
+}
+}
+}
+function second()
+{
+var variant2 = Number(document.getElementById("Coffee").value);
+var john;
+if (isNaN(variant2))
+{
+alert("Invalid")
+}
+else
+{
+if (variant2 > 29)
+john = variant2 - 30
+{
+document.getElementById("result").innerHTML = "Thankyou for comming";
+document.getElementById("result1").innerHTML = john;
+}
+}
+}
+function third()
+{
+var variant1 = Number(document.getElementById("Coffee").value);
+var kape;
+if (isNaN(variant1))
+{
+alert("Invalid")
+}
+else
+{
+if (variant1 > 24)
+kape = variant1 - 25
+{
+document.getElementById("result").innerHTML = "Thankyou for comming";
+document.getElementById("result1").innerHTML = kape;
+}
+}
+}
+</script>
+</html>
+  
