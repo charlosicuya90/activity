@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+					<head>
+							<title>Project</title>
+							<link rel="stylesheet" type="text/css" href="style.css">
+              <link href="https://fonts.googleapis.com/css?family=Francois+One|Pacifico|Srisakdi" rel="stylesheet">
+							<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+					</head>
+		<body style="background-image: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-903ea3cb.jpg); background-size: cover">
+
+			<a href="project.html"><h1 class="h1">Home</h1></h1></a>
+			<div class="container">
+               <label>First Name:</label>
+  <input type="text" id="fn">
+  <br><br>
+  <label>Last Name:</label>
+  <input type="text" id="ln">
+  <br><br>
+ 
+  <label>Ms/MR:</label>
+  <select>
+    <option>Ms</option>
+    <option>Mr</option>
+  </select>
+  <br><br>
+  <label>Address:</label>
+  <select id="address">
+    <option>Abucayan</option>
+    <option>Adlaon</option>
+    <option>Alang-alang</option>
+    <option>Alegria</option>
+    <option>Alpaco</option>
+    <option>Agus</option>
+    <option>Bacayan</option>
+    <option>Baliwagan</option>
+    <option>Bangbang</option>
+    <option>Basak</option>
+    <option>Buaya</option>
+    <option>Bulacao</option>
+    <option>Cabadiangan</option>
+    <option>Cabagdalan</option>
+    <option>Cahumayan</option>
+    <option>Calawisan</option>
+    <option>Capitol Site</option>
+    <option>Catarman</option>
+    <option>Dallangayan Este</option>
+    <option>Dapitan</option>
+    <option>Day‑as</option>
+    <option>Duangan</option>
+    <option>Dunggoan</option>
+    <option>Estaca</option>
+    <option>Ermita</option>
+    <option>Gaas</option>
+    <option>Guadalupe</option>
+    <option>Hingatmonan</option>
+    <option>Ilocanos Sur</option>
+    <option>Lamesa</option>
+    <option>Lahug</option>
+    <option>La Union</option>
+    <option>Looc</option>
+    <option>Maghaway</option>
+    <option>Matun‑og  </option>
+    <option>Mayana</option>
+    <option>Mulao</option>
+    <option>Nangka</option>
+    <option>North Poblacion</option>
+    <option>Oeste</option>
+    <option>Opao</option>
+    <option>Pampangga</option>
+    <option>Pasil</option>
+    <option>Pajac</option>
+    <option>Pondol</option>
+    <option>Pooc</option>
+    <option>Sacsac</option>
+    <option>Sambag I</option>
+    <option>San Miguel</option>
+    <option>Santa Cruz-Santo Niño</option>
+    <option>San Vicente</option>
+    <option>San Roque</option>
+    <option>Subangdaku</option>
+    <option>Tabok</option>
+    <option>Tabunan</option>
+    <option>Vito</option>
+    <option>Taytay</option>
+    <option>Tabunan</option>
+    <option>Tabunok</option>
+    <option>Tangke</option>
+    <option>Tapul</option>
+    <option>Tubigan</option>
+    <option>Umapad</option>
+    <option>West Poblacion</option>
+    <option>Tapul</option>
+  </select>
+
+  <label>City:</label>
+  <select id="city">
+    <option>Balamban City</option>
+    <option>Cebu City</option>
+    <option>Compostela City</option>
+    <option>Cordova City</option>
+    <option>Danao City</option> 
+    <option>Lapu-lapu CIty</option>
+    <option>Mandaue City</option>
+    <option>Naga City</option>
+    <option>San Fernando City</option>
+    <option>Talisay City</option>
+  </select>
+  <br><br>
+  <input type="button" value="check" onclick="requirements.result()">
+  <h1>Output:</h1>
+  <h1 id="result"></h1>
+				<div class="row">
+  <div class="card padding" style="width:350px">
+    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1200px-A_small_cup_of_coffee.JPG" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title" style="text-align: center;">BlackCoffee</h4>
+      <center><a href="BlackCoffee.html" class="btn btn-primary" style="width:100px;">Order</a></center>
+    </div>
+  </div>
+<h1 style="font-family: 'Srisakdi', cursive; text-decoration: underline;"><li>
+Black Coffee is your order  
+</li></h1>
+</div>  
+      </div>
+      
+  <script type="text/javascript">
+    var requirements = {
+      firstname:"",
+      lastname:"",
+      address:"",
+      cities:"",
+
+      getvalues: function () {
+        this.firstname = document.getElementById("fn").value;
+        this.lastname = document.getElementById("ln").value;
+
+        var addressindex=document.getElementById("address").selectedIndex;
+        var selectaddress=document.getElementById("address").options;
+        this.address=selectaddress[addressindex].value;
+
+        var cityindex=document.getElementById("city").selectedIndex;
+        var selectcity=document.getElementById("city").options;
+        this.cities=selectcity[cityindex].value;
+      },
+      result: function() {
+        this.getvalues();
+        document.getElementById("result").innerHTML =  "<label>Firstname:</label>" + this.firstname + "<br><label>Lastname:</label>" + "<br><label>Ms/Mr:</label></br>" + this.lastname + "<br><label>Address:</label> " + this.address + 
+        "<br><label>Cities:</label> " + this.cities;
+      }
+    }
+    
+  </script>
+    </body>
+
+  
+</html>

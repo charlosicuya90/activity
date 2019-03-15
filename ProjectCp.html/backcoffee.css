@@ -1,0 +1,24 @@
+.h1
+{
+	background-color: powderblue;
+	font-style:;
+	text-align: center;
+	color:red;
+}
+.container
+{
+	width: 1000px;
+	height:1000px;
+	margin: auto
+}
+h4
+{
+	color:powderblue;
+}
+.padding {
+	margin: 10px
+}
+.card-body
+{
+	background-color:black;
+}
